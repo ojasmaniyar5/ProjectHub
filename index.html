@@ -1,38 +1,68 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <title>ProjectHub</title>
-</head>
-<body bgcolor="gray">
-    <header>
-        <center><h1><u>Project Hub</u></h1></center>
-    </header>
-    <label for="language"><b>Select Language :</b></label>
+	<style type="text/css">.book-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
 
-    <select name="cars" id="cars">
-        <option value="English">English</option>
-        <option value="Hindi">Hindi</option>
-        <option value="Marathi">Marathi</option>
-    </select>
-<br><hr>
-    <div>
-        <input type="text" name="search" placeholder="Search Here....">
-    </div>
-    <div>
-        <center><h3>Project List</h3></center>
-    </div>
-    <div>
-    <main>
-        <section class="book-list">
+.book {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+	
+</style>
+<link rel="stylesheet" type="text/css" href="indexfileCSS.css">
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>index page of main website</title>
+</head>
+<body>
+	<h1><hr><center>
+		PROJECT HUB<hr></center></h1>
+		<form>
+			<label>SELECT LANGUAGE-</label>
+<select name="language" id="language">
+select language
+  <option value="saab">ENGLISH</option>
+  <option value="mercedes">HINDI</option>
+  <option value="mercedes">MARATHI</option>
+</select>
+	</form>
+
+
+<section class="book-list">
             <article class="book">
                 <center><h3>Categories</h3></center>
     <section class="book-list">
             <article class="book">
+            	<div class="popup" id="popup-1">
+            		<div class="overlay"></div>
+            	</div>
+            	<div class="content">
+            	<div class="close-btn" onclick="toggelpopup()"></div>
                 <h2>Healthcare</h2>
-                <button><a href="#">Select Language</a></button>
+                <button  onclick="toggelpopup()">Select Language</button>
+                <table>
+                	<tr>
+                	<th>
+                	<input type="checkbox" name="c">C
+                </th>
+            </tr>
+                </table>
+            </div>
+        </div>
             </article>
             <br>
             <article class="book">
@@ -49,7 +79,7 @@
                 <h2>Social Networking</h2>
                 <button><a href="#">Select Language</a></button>
             </article>
-            <hr>
+            
             <br>
             <article class="book">
                 <h2>Management Systems</h2>
@@ -73,12 +103,6 @@
             </section>
             </article>
         </section>
-    </main>
-    </div>
-
-
-
-
 
 </body>
 </html>
